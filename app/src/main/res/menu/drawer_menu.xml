@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_tienda"
+            android:checked="true"
+            android:icon="@drawable/ic_tienda"
+            android:title="Tienda"/>
+
+        <item
+            android:id="@+id/nav_eventos"
+            android:icon="@drawable/ic_eventos"
+            android:title="Eventos" />
+
+        <item
+            android:id="@+id/nav_favoritos"
+            android:icon="@drawable/ic_favoritos"
+            android:title="Favoritos" />
+
+        <item
+            android:id="@+id/nav_falso_favoritos"
+            android:icon="@drawable/ic_favoritos"
+            android:title="Favoritos"/>
+    </group>
+
+    <item android:title="Social">
+
+        <menu>
+
+            <group android:checkableBehavior="single">
+                <item
+                    android:id="@+id/nav_notificaciones"
+                    android:icon="@drawable/ic_notificaciones"
+                    android:title="Notificaciones" />
+
+                <item
+                    android:id="@+id/nav_falso_notificaciones"
+                    android:icon="@drawable/ic_notificaciones"
+                    android:title="Notificaciones" />
+            </group>
+        </menu>
+
+    </item>
+
+    <item android:title="Area Privada">
+
+        <menu>
+
+            <group android:checkableBehavior="single">
+                <item
+                    android:id="@+id/nav_configuracion"
+                    android:icon="@drawable/ic_configuracion"
+                    android:title="Configuracion" />
+
+                <item
+                    android:id="@+id/nav_falso_configuracion"
+                    android:icon="@drawable/ic_configuracion"
+                    android:title="Configuracion" />
+            </group>
+        </menu>
+    </item>
+
+    <item android:title="Acceso">
+
+        <menu>
+
+            <group android:checkableBehavior="single">
+                <item
+                    android:id="@+id/nav_inicio_sesion"
+                    android:icon="@drawable/ic_registrarse"
+                    android:title="Registrarse" />
+
+                <item
+                    android:id="@+id/nav_cerrar_sesion"
+                    android:icon="@drawable/ic_cerrar_sesion"
+                    android:title="Cerrar sesion" />
+
+            </group>
+        </menu>
+    </item>
+
+</menu>

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Users/sergi/AndroidStudioProjects/TFG2/app/src/main/res/drawable/celdas_edit_text.xml" value="0.2703125" />
+        <entry key="..\:/Users/sergi/AndroidStudioProjects/TFG2/app/src/main/res/drawable/drawer_item.xml" value="0.2703125" />
+        <entry key="..\:/Users/sergi/AndroidStudioProjects/TFG2/app/src/main/res/drawable/gradient_background.xml" value="0.2703125" />
+        <entry key="..\:/Users/sergi/AndroidStudioProjects/TFG2/app/src/main/res/drawable/ic_conf_contrasena.xml" value="0.2703125" />
+        <entry key="..\:/Users/sergi/AndroidStudioProjects/TFG2/app/src/main/res/drawable/ic_mail.xml" value="0.2703125" />
+        <entry key="..\:/Users/sergi/AndroidStudioProjects/TFG2/app/src/main/res/layout-w1240dp/activity_login.xml" value="0.16331994645247658" />
+        <entry key="..\:/Users/sergi/AndroidStudioProjects/TFG2/app/src/main/res/layout-w936dp/activity_login.xml" value="0.16051912568306012" />
+        <entry key="..\:/Users/sergi/AndroidStudioProjects/TFG2/app/src/main/res/layout/activity_inicio_sesion.xml" value="0.2128623188405797" />
+        <entry key="..\:/Users/sergi/AndroidStudioProjects/TFG2/app/src/main/res/layout/activity_login.xml" value="0.2128623188405797" />
+        <entry key="..\:/Users/sergi/AndroidStudioProjects/TFG2/app/src/main/res/layout/activity_main.xml" value="0.2" />
+        <entry key="..\:/Users/sergi/AndroidStudioProjects/TFG2/app/src/main/res/layout/activity_prueba.xml" value="0.20380434782608695" />
+        <entry key="..\:/Users/sergi/AndroidStudioProjects/TFG2/app/src/main/res/layout/activity_registro.xml" value="0.2078804347826087" />
+        <entry key="..\:/Users/sergi/AndroidStudioProjects/TFG2/app/src/main/res/layout/activity_reseteo_contrasena.xml" value="0.1160081053698075" />
+        <entry key="..\:/Users/sergi/AndroidStudioProjects/TFG2/app/src/main/res/layout/activity_sing.xml" value="0.1983695652173913" />
+        <entry key="..\:/Users/sergi/AndroidStudioProjects/TFG2/app/src/main/res/layout/fragment_camisetas.xml" value="0.2128623188405797" />
+        <entry key="..\:/Users/sergi/AndroidStudioProjects/TFG2/app/src/main/res/layout/fragment_carrito.xml" value="0.1816123188405797" />
+        <entry key="..\:/Users/sergi/AndroidStudioProjects/TFG2/app/src/main/res/layout/fragment_carrito_compra.xml" value="0.1816123188405797" />
+        <entry key="..\:/Users/sergi/AndroidStudioProjects/TFG2/app/src/main/res/layout/fragment_configuracion.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/sergi/AndroidStudioProjects/TFG2/app/src/main/res/layout/fragment_eventos.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/sergi/AndroidStudioProjects/TFG2/app/src/main/res/layout/fragment_falso_configuracion.xml" value="0.1" />
+        <entry key="..\:/Users/sergi/AndroidStudioProjects/TFG2/app/src/main/res/layout/fragment_falso_favoritos.xml" value="0.176" />
+        <entry key="..\:/Users/sergi/AndroidStudioProjects/TFG2/app/src/main/res/layout/fragment_falso_notificaciones.xml" value="0.2164855072463768" />
+        <entry key="..\:/Users/sergi/AndroidStudioProjects/TFG2/app/src/main/res/layout/fragment_favoritos.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/sergi/AndroidStudioProjects/TFG2/app/src/main/res/layout/fragment_login.xml" value="0.20380434782608695" />
+        <entry key="..\:/Users/sergi/AndroidStudioProjects/TFG2/app/src/main/res/layout/fragment_notificaciones.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/sergi/AndroidStudioProjects/TFG2/app/src/main/res/layout/fragment_object.xml" value="0.264" />
+        <entry key="..\:/Users/sergi/AndroidStudioProjects/TFG2/app/src/main/res/layout/fragment_second.xml" value="0.2128623188405797" />
+        <entry key="..\:/Users/sergi/AndroidStudioProjects/TFG2/app/src/main/res/layout/fragment_sudaderas.xml" value="0.2509057971014493" />
+        <entry key="..\:/Users/sergi/AndroidStudioProjects/TFG2/app/src/main/res/layout/fragment_tienda.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/sergi/AndroidStudioProjects/TFG2/app/src/main/res/layout/nav_header.xml" value="0.24003623188405798" />
+        <entry key="..\:/Users/sergi/AndroidStudioProjects/TFG2/app/src/main/res/layout/singlerowdesign.xml" value="0.176" />
+        <entry key="..\:/Users/sergi/AndroidStudioProjects/TFG2/app/src/main/res/layout/singlerowdesign_carrito.xml" value="0.264" />
+        <entry key="..\:/Users/sergi/AndroidStudioProjects/TFG2/app/src/main/res/layout/singlerowdesign_eventos.xml" value="0.1875" />
+        <entry key="..\:/Users/sergi/AndroidStudioProjects/TFG2/app/src/main/res/layout/singlerowdesign_favoritos.xml" value="0.12" />
+        <entry key="..\:/Users/sergi/AndroidStudioProjects/TFG2/app/src/main/res/layout/singlerowdesing_eventos.xml" value="0.2345679012345679" />
+        <entry key="..\:/Users/sergi/AndroidStudioProjects/TFG2/app/src/main/res/layout/singlerowdesing_novedades.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/sergi/AndroidStudioProjects/TFG2/app/src/main/res/layout/toolbar.xml" value="0.24003623188405798" />
+        <entry key="..\:/Users/sergi/AndroidStudioProjects/TFG2/app/src/main/res/layout/toolbar2.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/sergi/AndroidStudioProjects/TFG2/app/src/main/res/layout/www.xml" value="0.24728260869565216" />
+        <entry key="..\:/Users/sergi/AndroidStudioProjects/TFG2/app/src/main/res/menu/drawer_menu.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/sergi/AndroidStudioProjects/TFG2/app/src/main/res/menu/filter_menu.xml" value="0.4" />
+        <entry key="..\:/Users/sergi/AndroidStudioProjects/TFG2/app/src/main/res/menu/seachmenu.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/sergi/AndroidStudioProjects/TFG2/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.2703125" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>

@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragments.objectFragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+
+            <TextView
+                android:id="@+id/nombreholder"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="10dp"
+                android:text="Candidate Name"
+                android:textColor="#000"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/imagenholder"
+                android:layout_width="match_parent"
+                android:layout_height="900px"
+                android:layout_marginTop="80dp"
+                android:scaleX="1.6"
+                android:scaleY="1.5" />
+
+            <TextView
+                android:id="@+id/descripcionholder"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="25dp"
+                android:layout_marginTop="75dp"
+                android:layout_marginRight="25dp"
+                android:text="Candidate Course"
+                android:textColor="#000"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/precioholder"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="25dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginRight="25dp"
+                android:text="Candidate Email"
+                android:textColor="#000"
+                android:textSize="20sp" />
+
+            <Spinner
+                android:id="@+id/spinnerTallas"
+                android:layout_width="100dp"
+                android:layout_height="40dp"
+                android:layout_marginLeft="-110dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginRight="25dp" />
+
+            <Button
+                android:id="@+id/btnAñadirAlCarrito"
+                android:layout_width="400dp"
+                android:layout_height="60dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                android:backgroundTint="@color/teal_200"
+                android:onClick="onClick"
+                android:textColor="@color/black"
+                android:text="Añadir al carrito" />
+
+        </LinearLayout>
+
+    </ScrollView>
+</FrameLayout>

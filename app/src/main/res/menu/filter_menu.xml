@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <item
+        android:id="@+id/CarritodeCompra"
+        android:checked="true"
+        android:icon="@drawable/ic_carritodecompra"
+        android:title="Carrito"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/Tienda"
+        android:checked="true"
+        android:icon="@drawable/ic_filtros"
+        android:title="Tienda" />
+
+
+    <item
+        android:id="@+id/Sudaderas"
+        android:icon="@drawable/ic_filtros"
+        android:title="Sudaderas" />
+
+
+    <item
+        android:id="@+id/Camisetas"
+        android:icon="@drawable/ic_filtros"
+        android:title="Camisetas" />
+
+
+</menu>

@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient_background"
+    android:orientation="vertical"
+    android:padding="20dp"
+    tools:context=".login.Registro">
+
+    <TextView
+        android:textColor="@color/black"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="30dp"
+        android:text="REGISTRO"
+        android:textAlignment="center"
+        android:textSize="40dp" />
+
+    <EditText
+        android:id="@+id/editTextNombreRegistro"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="40dp"
+        android:background="#30000000"
+        android:drawableLeft="@drawable/ic_usuario"
+        android:drawablePadding="10dp"
+        android:hint="Nombre"
+        android:padding="10dp"
+        android:textColor="@color/black"
+        android:textColorHint="#66000000" />
+
+    <EditText
+        android:id="@+id/editTextApellidosRegistro"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="25dp"
+        android:background="#30000000"
+        android:drawableLeft="@drawable/ic_usuario"
+        android:drawablePadding="10dp"
+        android:hint="Apellidos"
+        android:padding="10dp"
+        android:textColor="@color/black"
+        android:textColorHint="#66000000" />
+
+    <EditText
+        android:id="@+id/editTextMailRegistro"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="25dp"
+        android:background="#30000000"
+        android:drawableLeft="@drawable/ic_mail"
+        android:drawablePadding="10dp"
+        android:inputType="textEmailAddress"
+        android:hint="Mail"
+        android:padding="10dp"
+        android:textColor="@color/black"
+        android:textColorHint="#66000000" />
+
+    <EditText
+        android:id="@+id/editTextContraseñaRegistro"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="25dp"
+        android:background="#30000000"
+        android:drawableLeft="@drawable/ic_contrasena"
+        android:drawablePadding="10dp"
+        android:hint="Contraseña"
+        android:inputType="textPassword"
+        android:padding="10dp"
+        android:textColor="@color/black"
+        android:textColorHint="#66000000" />
+
+    <EditText
+        android:id="@+id/editTextReContraseñaRegistro"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="25dp"
+        android:background="#30000000"
+        android:drawableLeft="@drawable/ic_conf_contrasena"
+        android:drawablePadding="10dp"
+        android:hint="Confirmar contraseña"
+        android:inputType="textPassword"
+        android:padding="10dp"
+        android:textColor="@color/black"
+        android:textColorHint="#66000000" />
+
+    <Button
+        android:id="@+id/btnRegistro"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginTop="40dp"
+        android:backgroundTint="@color/black"
+        android:onClick="onClick"
+        android:text="Registrarme" />
+
+    <TextView
+        android:id="@+id/textParaInicioSesion"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="30dp"
+        android:textColor="@color/black"
+        android:text="¿Ya tienes cuenta? Iniciar sesión"
+        android:textAlignment="center" />
+
+
+</LinearLayout>

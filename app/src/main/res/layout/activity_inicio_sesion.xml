@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient_background"
+    android:orientation="vertical"
+    android:padding="20dp"
+    tools:context=".login.inicioSesion">
+
+    <TextView
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="180dp"
+        android:text="Iniciar sesión"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="40dp" />
+
+    <EditText
+        android:id="@+id/editTextMailInicio"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="60dp"
+        android:background="#30000000"
+        android:drawableLeft="@drawable/ic_mail"
+        android:drawablePadding="10dp"
+        android:inputType="textEmailAddress"
+        android:hint="Mail"
+        android:padding="10dp"
+        android:textColor="@color/black"
+        android:textColorHint="#66000000" />
+
+    <EditText
+        android:id="@+id/editTextContraseñaInicio"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="25dp"
+        android:background="#30000000"
+        android:drawableLeft="@drawable/ic_contrasena"
+        android:drawablePadding="10dp"
+        android:hint="Contraseña"
+        android:inputType="textPassword"
+        android:padding="10dp"
+        android:textColor="@color/black"
+        android:textColorHint="#66000000" />
+
+    <TextView
+        android:id="@+id/txtHasOlvidadoLaContraseña"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:text="Has olvidado la contraseña?"
+        android:gravity="right"
+        android:layout_marginTop="20dp"
+        android:visibility="invisible"
+        />
+
+    <Button
+        android:id="@+id/btnInicioSesion"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_gravity="right"
+        android:backgroundTint="@color/black"
+        android:onClick="onClick"
+        android:text="Iniciar sesión" />
+
+    <TextView
+        android:id="@+id/textParaRegistrarse"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="50dp"
+        android:textColor="@color/black"
+        android:text="¿No tienes cuenta? Registrate"
+        android:textAlignment="center" />
+
+
+</LinearLayout>

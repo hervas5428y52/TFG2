@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/row"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:elevation="8dp"
+    app:cardCornerRadius="10dp">
+    <!--app:cardUseCompatPadding="true"-->
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp">
+
+        <ImageView
+            android:id="@+id/imgRopa"
+            android:layout_width="3000px"
+            android:layout_height="1300px"
+            android:layout_marginTop="30dp" />
+
+        <TextView
+            android:id="@+id/txtNombre"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/imgRopa"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="26dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:text="hola que tal"
+            android:textColor="@color/black"
+            android:textSize="18dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/txtPrecio"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/imgRopa"
+            android:layout_marginLeft="300dp"
+            android:layout_marginTop="50dp"
+            android:text="99.99€"
+            android:textColor="@color/black"
+            android:textSize="16dp" />
+
+
+        <View
+            android:id="@+id/divider2"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_below="@id/txtPrecio"
+            android:layout_marginTop="20dp"
+            android:background="#90000000"
+            android:outlineSpotShadowColor="@color/black" />
+
+        <ImageButton
+            android:id="@+id/iB_meGustaOFF"
+            android:layout_width="150px"
+            android:layout_height="150px"
+            android:layout_below="@id/txtNombre"
+            android:layout_marginStart="26dp"
+            android:background="@null"
+            app:srcCompat="@drawable/me_gusta" />
+
+        <ImageButton
+            android:id="@+id/iB_meGustaON"
+            android:layout_width="150px"
+            android:layout_height="150px"
+            android:layout_below="@id/txtNombre"
+            android:layout_marginStart="26dp"
+            android:background="@null"
+            app:srcCompat="@drawable/me_gusta"
+            android:visibility="invisible"/>
+
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>
