@@ -29,11 +29,9 @@ public class SudaderasFragment extends Fragment {
     FirebaseRecyclerOptions<modelRopa> options;
     View view;
 
-
     public SudaderasFragment() {
     }
 
-    // TODO: Rename and change types and number of parameters
     public static SudaderasFragment newInstance(String param1, String param2) {
         SudaderasFragment fragment = new SudaderasFragment();
         Bundle args = new Bundle();

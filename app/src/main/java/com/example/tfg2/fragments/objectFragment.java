@@ -40,18 +40,24 @@ public class objectFragment extends Fragment implements View.OnClickListener {
 
     private String mParam1;
     private String mParam2;
-    valueSpinner valorSpinner = new valueSpinner();
+    private valueSpinner valorSpinner = new valueSpinner();
     private FirebaseAuth mAuth;
-    DatabaseReference databaseReference;
-    Spinner tallas;
-    NavigationView navigationView;
-    ImageView imageView;
-    String nombre, precio, descripcion, url;
+    private DatabaseReference databaseReference;
+    private Spinner tallas;
+    private NavigationView navigationView;
+    private ImageView imageView;
+    private String nombre, precio, descripcion, url;
+    private TextView nombreHold, descripcionHold, precioHold;
+    private ImageView imagenHold;
+    private Button añadirCesta;
+    private ArrayAdapter<CharSequence> adapter;
+    private String id;
+    private View view;
+    private Map<String, Object> map;
 
 
     public objectFragment() {
     }
-
 
     public objectFragment(String nombre, String descripcion, String precio, String url) {
         this.nombre = nombre;
@@ -84,10 +90,8 @@ public class objectFragment extends Fragment implements View.OnClickListener {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_object, container, false);
-        TextView nombreHold, descripcionHold, precioHold;
-        ImageView imagenHold;
-        Button añadirCesta;
+        view = inflater.inflate(R.layout.fragment_object, container, false);
+
         mAuth = FirebaseAuth.getInstance();
         databaseReference = FirebaseDatabase.getInstance().getReference();
         añadirCesta = view.findViewById(R.id.btnAñadirAlCarrito);
@@ -103,7 +107,7 @@ public class objectFragment extends Fragment implements View.OnClickListener {
         Glide.with(getContext()).load(url).into(imagenHold);
         Log.i("url IMAGEN", url);
 
-        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(getContext(), R.array.talla, android.R.layout.simple_spinner_item);
+        adapter = ArrayAdapter.createFromResource(getContext(), R.array.talla, android.R.layout.simple_spinner_item);
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_item);
         tallas.setAdapter(adapter);
 
@@ -111,7 +115,7 @@ public class objectFragment extends Fragment implements View.OnClickListener {
         tallas.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
-           valorSpinner.setValorSpinner(adapterView.getItemAtPosition(i).toString());
+                valorSpinner.setValorSpinner(adapterView.getItemAtPosition(i).toString());
             }
 
             @Override
@@ -120,20 +124,19 @@ public class objectFragment extends Fragment implements View.OnClickListener {
             }
         });
 
-
         return view;
     }
 
     @Override
     public void onClick(View view) {
 
-        Map<String, Object> map = new HashMap<>();
+        map = new HashMap<>();
         map.put("nombreProductoCarrito", nombre);
         map.put("precioProductoCarrito", precio);
         map.put("descripcionProductoCarrito", descripcion);
         map.put("urlProductoCarrito", url);
         map.put("tallaProductoCarrito", valorSpinner.getValorSpinner());
-        String id = mAuth.getCurrentUser().getUid();
+        id = mAuth.getCurrentUser().getUid();
         databaseReference.child("Users").child(id).child("ProductosCarrito").child(nombre).setValue(map).addOnCompleteListener(new OnCompleteListener<Void>() {
             @Override
             public void onComplete(@NonNull Task<Void> task) {
@@ -141,12 +144,13 @@ public class objectFragment extends Fragment implements View.OnClickListener {
                     Log.i("INFO Carrito", "Se ha añadido perfectamente al carrito");
                 } else {
                     Log.i("INFO Carrito", "No se ha añadido perfectamente al carrito");
-
                 }
             }
         });
 
     }
+
+
 
 /*
     public void onBackPressed(int keyCode, KeyEvent event) {

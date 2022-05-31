@@ -18,13 +18,16 @@ public class FalsoConfiguracionFragment extends Fragment implements View.OnClick
 
     private static final String ARG_PARAM1 = "param1";
     private static final String ARG_PARAM2 = "param2";
-
     private String mParam1;
     private String mParam2;
+    private View view;
+    private Button btnIniciarSesion;
+    private Button btnRegistro;
+    private Intent intent;
+    private Intent intsent;
 
     public FalsoConfiguracionFragment() {
     }
-
 
     public static FalsoConfiguracionFragment newInstance(String param1, String param2) {
         FalsoConfiguracionFragment fragment = new FalsoConfiguracionFragment();
@@ -48,15 +51,13 @@ public class FalsoConfiguracionFragment extends Fragment implements View.OnClick
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View view = inflater.inflate(R.layout.fragment_falso_configuracion, container, false);
+        view = inflater.inflate(R.layout.fragment_falso_configuracion, container, false);
 
-
-        Button btnIniciarSesion = view.findViewById(R.id.buttonIniciodeSesionConfiguracion);
-        Button btnRegistro = view.findViewById(R.id.buttonRegistroConfiguracion);
+        btnIniciarSesion = view.findViewById(R.id.buttonIniciodeSesionConfiguracion);
+        btnRegistro = view.findViewById(R.id.buttonRegistroConfiguracion);
 
         btnIniciarSesion.setOnClickListener(this);
         btnRegistro.setOnClickListener(this);
-
 
         return view;
     }
@@ -66,11 +67,11 @@ public class FalsoConfiguracionFragment extends Fragment implements View.OnClick
 
         switch (view.getId()){
             case R.id.buttonRegistroConfiguracion:
-                Intent intent = new Intent(getContext(), Registro.class);
+                intent = new Intent(getContext(), Registro.class);
                 startActivity(intent);
                 break;
             case R.id.buttonIniciodeSesionConfiguracion:
-                Intent intsent = new Intent(getContext(), inicioSesion.class);
+                intsent = new Intent(getContext(), inicioSesion.class);
                 startActivity(intsent);
                 break;
         }

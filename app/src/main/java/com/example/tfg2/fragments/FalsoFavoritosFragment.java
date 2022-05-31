@@ -22,6 +22,13 @@ public class FalsoFavoritosFragment extends Fragment implements View.OnClickList
     private String mParam1;
     private String mParam2;
 
+    View view;
+
+    Button btnIniciarSesion;
+    Button btnRegistro;
+    Intent intent;
+    Intent intsent;
+
     public FalsoFavoritosFragment() {
         // Required empty public constructor
     }
@@ -48,10 +55,10 @@ public class FalsoFavoritosFragment extends Fragment implements View.OnClickList
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
 
-        View view = inflater.inflate(R.layout.fragment_falso_favoritos, container, false);
+        view = inflater.inflate(R.layout.fragment_falso_favoritos, container, false);
 
-        Button btnIniciarSesion = view.findViewById(R.id.buttonIniciodeSesionFavoritos);
-        Button btnRegistro = view.findViewById(R.id.buttonRegistroFavoritos);
+        btnIniciarSesion = view.findViewById(R.id.buttonIniciodeSesionFavoritos);
+        btnRegistro = view.findViewById(R.id.buttonRegistroFavoritos);
 
         btnIniciarSesion.setOnClickListener(this);
         btnRegistro.setOnClickListener(this);
@@ -65,11 +72,11 @@ public class FalsoFavoritosFragment extends Fragment implements View.OnClickList
 
         switch (view.getId()){
             case R.id.buttonRegistroFavoritos:
-                Intent intent = new Intent(getContext(), Registro.class);
+                intent = new Intent(getContext(), Registro.class);
                 startActivity(intent);
                 break;
             case R.id.buttonIniciodeSesionFavoritos:
-                Intent intsent = new Intent(getContext(), inicioSesion.class);
+                intsent = new Intent(getContext(), inicioSesion.class);
                 startActivity(intsent);
                 break;
         }

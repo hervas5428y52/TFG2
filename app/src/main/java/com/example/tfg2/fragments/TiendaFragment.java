@@ -34,13 +34,12 @@ public class TiendaFragment extends Fragment {
 
     private static final String ARG_PARAM1 = "param1";
     private static final String ARG_PARAM2 = "param2";
-
-
     private String mParam1;
     private String mParam2;
     public RecyclerView recyclerView;
     public myAdapter adapter;
     FirebaseRecyclerOptions<modelRopa> options;
+    View view;
 
     public TiendaFragment() {
         // Required empty public constructor
@@ -67,7 +66,7 @@ public class TiendaFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_tienda, container, false);
+        view = inflater.inflate(R.layout.fragment_tienda, container, false);
 
         recyclerView = (RecyclerView) view.findViewById(R.id.recviewTienda);
         recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
@@ -76,13 +75,10 @@ public class TiendaFragment extends Fragment {
                 .setQuery(FirebaseDatabase.getInstance().getReference().child("Ropa"), modelRopa.class)
                 .build();
 
-
         adapter = new myAdapter(options);
         recyclerView.setAdapter(adapter);
-
         return view;
     }
-
 
     @Override
     public void onStart() {

@@ -20,8 +20,6 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.TextView;
-
-import com.example.tfg2.BD.BaseDatos;
 import com.example.tfg2.fragments.CamisetasFragment;
 import com.example.tfg2.fragments.CarritoFragment;
 import com.example.tfg2.fragments.ConfiguracionFragment;
@@ -40,28 +38,23 @@ import com.google.firebase.auth.FirebaseAuth;
 public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
 
-    BaseDatos admin;
-    SQLiteDatabase bd;
-    Cursor fila;
-    ContentValues contentValues = new ContentValues();
-    FirebaseAuth mAuth = FirebaseAuth.getInstance();
+    private FirebaseAuth mAuth = FirebaseAuth.getInstance();
 
-    DrawerLayout drawerLayout;
-    NavigationView navigationView;
-    Toolbar toolbar;
-    ActionBarDrawerToggle toggle;
-    TextView infoUser;
-
-    boolean aaa = true;
-    boolean tienda = true;
-    boolean sudaderas;
-    boolean camisetas;
-
-    String nombreUser;
-    String apellidosUser;
-    String mailUser;
-    int reg = 1;
-
+    private DrawerLayout drawerLayout;
+    private NavigationView navigationView;
+    private Toolbar toolbar;
+    private ActionBarDrawerToggle toggle;
+    private TextView infoUser;
+    private View hView;
+    private boolean principal = true;
+    private boolean tienda = true;
+    private boolean sudaderas;
+    private boolean camisetas;
+    private Menu nav_Menu;
+    private String nombreUser;
+    private MenuInflater inflater;
+    private FragmentManager fragmentManager;
+    private FragmentTransaction fragmentTransaction;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -71,7 +64,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         drawerLayout = findViewById(R.id.drawer_layout);
         navigationView = findViewById(R.id.nav_view);
         comprobarIcinioSesion();
-        View hView = navigationView.getHeaderView(0);
+        hView = navigationView.getHeaderView(0);
         infoUser = (TextView) hView.findViewById(R.id.infoUser);
         infoUser.setText(nombreUser);
         toolbar = findViewById(R.id.toolbar);
@@ -107,7 +100,6 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         }
     }
 
-
     private void comprobarIcinioSesion() {
 /*
         admin = new BaseDatos(this, "Almacen", null, 1);
@@ -126,11 +118,10 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
     }
 
-
     //Modelo de usuadio Registrado
     public void hideItemInicioSesion() {
         navigationView = (NavigationView) findViewById(R.id.nav_view);
-        Menu nav_Menu = navigationView.getMenu();
+        nav_Menu = navigationView.getMenu();
         nav_Menu.findItem(R.id.nav_inicio_sesion).setVisible(false);
         nav_Menu.findItem(R.id.nav_falso_favoritos).setVisible(false);
         nav_Menu.findItem(R.id.nav_favoritos).setVisible(true);
@@ -190,10 +181,10 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        MenuInflater inflater = getMenuInflater();
+        inflater = getMenuInflater();
         inflater.inflate(R.menu.filter_menu, menu);
 
-        if (!aaa) {
+        if (!principal) {
             menu.findItem(R.id.Tienda).setVisible(false);
             menu.findItem(R.id.Sudaderas).setVisible(false);
             menu.findItem(R.id.Camisetas).setVisible(false);
@@ -229,64 +220,64 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     }
 
     private void selectItemNav(MenuItem item) {
-        FragmentManager fragmentManager = getSupportFragmentManager();
-        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+        fragmentManager = getSupportFragmentManager();
+        fragmentTransaction = fragmentManager.beginTransaction();
 
 
         switch (item.getItemId()) {
             case R.id.nav_tienda:
                 fragmentTransaction.replace(R.id.content, new TiendaFragment()).commit();
-                aaa = true;
-                Log.i("INFO", String.valueOf(aaa));
+                principal = true;
+                Log.i("INFO", String.valueOf(principal));
                 invalidateOptionsMenu();
                 setTitle(item.getTitle());
                 break;
             case R.id.nav_notificaciones:
                 fragmentTransaction.replace(R.id.content, new NotificacionesFragment()).commit();
-                aaa = false;
-                Log.i("INFO", String.valueOf(aaa));
+                principal = false;
+                Log.i("INFO", String.valueOf(principal));
                 invalidateOptionsMenu();
                 setTitle(item.getTitle());
                 break;
             case R.id.nav_falso_notificaciones:
                 fragmentTransaction.replace(R.id.content, new FalsoNotificacionesFragment()).commit();
-                aaa = false;
-                Log.i("INFO", String.valueOf(aaa));
+                principal = false;
+                Log.i("INFO", String.valueOf(principal));
                 invalidateOptionsMenu();
                 setTitle(item.getTitle());
                 break;
             case R.id.nav_favoritos:
                 fragmentTransaction.replace(R.id.content, new FavoritosFragment()).commit();
-                aaa = false;
-                Log.i("INFO", String.valueOf(aaa));
+                principal = false;
+                Log.i("INFO", String.valueOf(principal));
                 invalidateOptionsMenu();
                 setTitle(item.getTitle());
                 break;
             case R.id.nav_falso_favoritos:
                 fragmentTransaction.replace(R.id.content, new FalsoFavoritosFragment()).commit();
-                aaa = false;
-                Log.i("INFO", String.valueOf(aaa));
+                principal = false;
+                Log.i("INFO", String.valueOf(principal));
                 invalidateOptionsMenu();
                 setTitle(item.getTitle());
                 break;
             case R.id.nav_eventos:
                 fragmentTransaction.replace(R.id.content, new EventosFragment()).commit();
-                aaa = false;
-                Log.i("INFO", String.valueOf(aaa));
+                principal = false;
+                Log.i("INFO", String.valueOf(principal));
                 invalidateOptionsMenu();
                 setTitle(item.getTitle());
                 break;
             case R.id.nav_configuracion:
                 fragmentTransaction.replace(R.id.content, new ConfiguracionFragment()).commit();
-                aaa = false;
-                Log.i("INFO", String.valueOf(aaa));
+                principal = false;
+                Log.i("INFO", String.valueOf(principal));
                 invalidateOptionsMenu();
                 setTitle(item.getTitle());
                 break;
             case R.id.nav_falso_configuracion:
                 fragmentTransaction.replace(R.id.content, new FalsoConfiguracionFragment()).commit();
-                aaa = false;
-                Log.i("INFO", String.valueOf(aaa));
+                principal = false;
+                Log.i("INFO", String.valueOf(principal));
                 invalidateOptionsMenu();
                 setTitle(item.getTitle());
                 break;
@@ -308,8 +299,8 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
 
-        FragmentManager fragmentManager = getSupportFragmentManager();
-        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+        fragmentManager = getSupportFragmentManager();
+        fragmentTransaction = fragmentManager.beginTransaction();
 
         switch (item.getItemId()) {
             case R.id.Tienda:

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/row_notificaciones"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:elevation="8dp"
+    app:cardCornerRadius="2dp">
+    <!--app:cardUseCompatPadding="true"-->
+
+
+    <RelativeLayout
+        android:id="@+id/ProductosNotificaciones"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:visibility="visible">
+
+        <TextView
+            android:id="@+id/txtfechaNotificacion"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="15dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:text="Edicion Jbalvin"
+            android:textColor="@color/black"
+            android:textSize="25dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/txtidNotificacion"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txtfechaNotificacion"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="20dp"
+            android:textSize="20dp"
+            android:text="poenirwnbwnprmvrp" />
+
+
+        <View
+            android:id="@+id/divider2"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_below="@id/txtidNotificacion"
+            android:layout_marginTop="20dp"
+            android:background="#90000000"
+            android:outlineSpotShadowColor="@color/black" />
+
+
+    </RelativeLayout>
+
+
+</androidx.cardview.widget.CardView>
+
+

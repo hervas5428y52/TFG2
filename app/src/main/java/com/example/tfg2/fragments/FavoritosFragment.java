@@ -34,13 +34,14 @@ public class FavoritosFragment extends Fragment {
 
     private static final String ARG_PARAM1 = "param1";
     private static final String ARG_PARAM2 = "param2";
-
     private String mParam1;
     private String mParam2;
-    public RecyclerView recyclerView;
-    public myAdapterFavoritos adapter;
-    FirebaseRecyclerOptions<modelFavoritos> options;
+    private RecyclerView recyclerView;
+    private myAdapterFavoritos adapter;
+    private FirebaseRecyclerOptions<modelFavoritos> options;
     private FirebaseAuth mAuth = FirebaseAuth.getInstance();
+    private View view;
+    private String id;
 
     public FavoritosFragment() {
         // Required empty public constructor
@@ -76,8 +77,8 @@ public class FavoritosFragment extends Fragment {
 
         // Inflate the layout for this fragment
 
-        View view = inflater.inflate(R.layout.fragment_favoritos, container, false);
-        String id = mAuth.getCurrentUser().getUid();
+        view = inflater.inflate(R.layout.fragment_favoritos, container, false);
+        id = mAuth.getCurrentUser().getUid();
         recyclerView = (RecyclerView) view.findViewById(R.id.recviewFavoritos);
         recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
 

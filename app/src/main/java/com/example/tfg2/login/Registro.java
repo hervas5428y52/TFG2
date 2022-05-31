@@ -70,7 +70,6 @@ public class Registro extends AppCompatActivity implements View.OnClickListener 
         yaEstoyRegistrado.setOnClickListener(this);
     }
 
-
     @Override
     public void onStart() {
         super.onStart();

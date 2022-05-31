@@ -1,6 +1,6 @@
 package com.example.tfg2;
 
-public class modelFavoritos {
+public class  modelFavoritos {
 
     private String nombreProducto;
     private String precioProducto;

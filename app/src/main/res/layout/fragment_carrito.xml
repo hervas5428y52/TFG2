@@ -8,19 +8,27 @@
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recviewCarrito"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" >
+        android:layout_height="match_parent">
 
 
     </androidx.recyclerview.widget.RecyclerView>
 
+    <TextView
+        android:id="@+id/txtCestaVacia"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="No hay productos en la cesta"
+        android:textSize="20dp" />
+
     <Button
-        android:id="@+id/comprar"
+        android:id="@+id/btnComprar"
         android:layout_width="match_parent"
         android:layout_height="80dp"
         android:layout_marginTop="530dp"
         android:backgroundTint="@color/teal_200"
-        android:textColor="@color/black"
-        android:text="Comprar" />
+        android:text="Comprar"
+        android:textColor="@color/black" />
 
 
 </FrameLayout>

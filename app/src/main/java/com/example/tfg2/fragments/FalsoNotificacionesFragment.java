@@ -19,9 +19,13 @@ public class FalsoNotificacionesFragment extends Fragment implements View.OnClic
 
     private static final String ARG_PARAM1 = "param1";
     private static final String ARG_PARAM2 = "param2";
-
     private String mParam1;
     private String mParam2;
+    private View view;
+    private Button btnIniciarSesion;
+    private Button btnRegistro;
+    private Intent intent;
+    private Intent intsent;
 
     public FalsoNotificacionesFragment() {
     }
@@ -48,10 +52,10 @@ public class FalsoNotificacionesFragment extends Fragment implements View.OnClic
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View view = inflater.inflate(R.layout.fragment_falso_notificaciones, container, false);
+        view = inflater.inflate(R.layout.fragment_falso_notificaciones, container, false);
 
-        Button btnIniciarSesion = view.findViewById(R.id.buttonIniciodeSesionNotificaciones);
-        Button btnRegistro = view.findViewById(R.id.buttonRegistroNotificaciones);
+        btnIniciarSesion = view.findViewById(R.id.buttonIniciodeSesionNotificaciones);
+        btnRegistro = view.findViewById(R.id.buttonRegistroNotificaciones);
 
         btnIniciarSesion.setOnClickListener(this);
         btnRegistro.setOnClickListener(this);
@@ -65,11 +69,11 @@ public class FalsoNotificacionesFragment extends Fragment implements View.OnClic
     public void onClick(View view) {
         switch (view.getId()){
             case R.id.buttonRegistroNotificaciones:
-                Intent intent = new Intent(getContext(), Registro.class);
+                 intent = new Intent(getContext(), Registro.class);
                 startActivity(intent);
                 break;
             case R.id.buttonIniciodeSesionNotificaciones:
-                Intent intsent = new Intent(getContext(), inicioSesion.class);
+                 intsent = new Intent(getContext(), inicioSesion.class);
                 startActivity(intsent);
                 break;
         }
